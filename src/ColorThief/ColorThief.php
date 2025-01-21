@@ -530,7 +530,7 @@ class ColorThief
 
         // calculate the actual colors
         $colors = $priorityQueue->map(function (VBox $vbox) {
-            return new Color(...$vbox->avg());
+            return new Color(...$vbox->avg(), $vbox->count());
         });
         $colors = array_reverse($colors);
 
